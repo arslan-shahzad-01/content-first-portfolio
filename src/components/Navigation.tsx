@@ -22,8 +22,11 @@ export const Navigation = ({ activeSection, onSectionChange }: NavigationProps) 
               : "text-muted-foreground hover:text-foreground hover:bg-secondary"
           )}
           onClick={() => onSectionChange(item.id)}
+          asChild
         >
-          {item.label}
+          <a href={`#${item.id}`}>
+            {item.label}
+          </a>
         </Button>
       ))}
     </nav>

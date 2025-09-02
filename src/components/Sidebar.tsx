@@ -1,5 +1,6 @@
 import { personalInfo, socialLinks, education } from "@/data/portfolio";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Calendar, Github, Linkedin, Twitter, GraduationCap } from "lucide-react";
@@ -28,9 +29,22 @@ export const Sidebar = () => {
           <h1 className="text-2xl font-bold text-sidebar-foreground mb-2">
             {personalInfo.name}
           </h1>
-          <p className="text-muted-foreground bg-secondary px-4 py-2 rounded-full text-sm">
+          <p className="text-muted-foreground bg-secondary px-4 py-2 rounded-full text-sm mb-2">
             {personalInfo.role}
           </p>
+          <div className="flex justify-center mt-2">
+            <Badge
+              variant="default"
+              className="bg-primary text-primary-foreground border-primary shadow-lg px-4 py-1 font-bold text-base animate-pulse"
+            >
+              <span className="inline-block align-middle mr-2">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="7" fill="hsl(var(--primary))" stroke="#fff" strokeWidth="2" />
+                </svg>
+              </span>
+              Available
+            </Badge>
+          </div>
         </div>
 
         {/* Contact Information */}

@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { Navigation } from "@/components/Navigation";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
+import { navigationItems } from "@/data/portfolio";
 import { ProjectsSection } from "@/components/sections/PortfolioSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState(() => {
+    // Get initial section from URL hash or default to "about"
+    const hash = window.location.hash.slice(1);
+    return navigationItems.some(item => item.id === hash) ? hash : "about";
+  });
+
+  useEffect(() => {
+    // Update hash when section changes
+    window.location.hash = activeSection;
+
+    // Listen for hash changes (back/forward navigation)
+    const handleHashChange = () => {
+      const newHash = window.location.hash.slice(1);
+      if (navigationItems.some(item => item.id === newHash)) {
+        setActiveSection(newHash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [activeSection]);
 
   const renderSection = () => {
     switch (activeSection) {

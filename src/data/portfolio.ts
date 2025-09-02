@@ -1,11 +1,11 @@
 // Portfolio data - Edit this file to update your information across the entire website
 
 export const personalInfo = {
-  name: "Arslan",
+  name: "Muhammad Arslan Shahzad",
   role: "Full Stack Developer | AI Enthusiast | Problem Solver",
-  avatar: "/lovable-uploads/55b60f7e-d4ed-4e10-bbc2-04cd669c7df0.png",
+  avatar: "/profile.jpeg",
   email: "dev.arslanshahzad@gmail.com",
-  phone: "+92 XXX XXX XXXX",
+  phone: "+92 346 6420073",
   location: "Pakistan",
   age: "Student",
   about: "I'm an undergraduate student pursuing BSAI (Bachelor of Science in Artificial Intelligence) at Information Technology University, graduating in 2027. I specialize in Full Stack Development, Artificial Intelligence, and Data Engineering.",
@@ -16,7 +16,17 @@ export const education = {
   degree: "BSAI (Bachelor of Science in Artificial Intelligence)",
   institution: "Information Technology University",
   graduation_year: 2027,
-  status: "Undergraduate Student"
+  status: "Undergraduate Student",
+  courses: [
+    {
+      name: "Introduction to Python",
+      year: 2024
+    },
+    {
+      name: "Artificial Neural Networks (ANN)",
+      year: 2025
+    }
+  ]
 };
 
 export const navigationItems = [
@@ -28,10 +38,10 @@ export const navigationItems = [
 ];
 
 export const skills = {
-  languages: ["Python", "C++"],
+  languages: ["Python", "C++", "JavaScript", "TypeScript"],
   frameworks_libraries: ["FastAPI", "Streamlit", "SQLAlchemy", "Alembic", "Plotly", "React"],
-  databases: ["PostgreSQL", "Oracle", "CSV-based ETL pipelines"],
-  tools_platforms: ["Git/GitHub", "VS Code", "Docker", "JWT Authentication"],
+  databases: ["PostgreSQL", "Oracle", "MySQL", "SQLite","MongoDB", "CSV-based ETL pipelines"],
+  tools_platforms: ["Git/GitHub", "VS Code", "Docker", "JWT Authentication", "Postman"],
   other_skills: ["Algorithms", "Data Structures", "Problem Solving"]
 };
 
@@ -45,7 +55,10 @@ export const strengths = [
 export const fields = [
   "Full Stack Development",
   "Artificial Intelligence", 
-  "Data Engineering"
+  "Data Engineering",
+  "Machine Learning",
+  "APIs",
+  "Databases"
 ];
 
 export const projects = [
@@ -71,14 +84,14 @@ export const projects = [
     category: "ai-ml"
   },
   {
-    id: "etl-dashboard",
-    name: "ETL & Device Monitoring Dashboard", 
-    description: "Built a Streamlit dashboard to visualize device data from Oracle & CSV sources.",
-    technologies: ["Streamlit", "Oracle", "CSV", "Plotly"],
-    features: ["Filtering", "Overview metrics", "Device monitoring", "Interactive visualizations"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    githubUrl: "https://github.com/dev-arslan-shahzad/etl-dashboard",
-    category: "data-engineering"
+    id: "Hate-Speech-Detector",
+    name: "Hate Speech Detector",
+    description: "SafeSpeak Sentinel is a comprehensive web application designed to detect and prevent hate speech and harmful content. It combines powerful machine learning models with a user-friendly interface to help create safer online spaces.",
+    technologies: ["Python", "ML Model Training", "FastAPI", "React Vite", "Tailwind CSS"],
+    features: ["Backend & Model training", "Documentation", "System integration"],
+    image: "/hatespeech.png",
+    githubUrl: "https://github.com/dev-arslan-shahzad/HateSpeech",
+    category: "AI - ML"
   }
 ];
 

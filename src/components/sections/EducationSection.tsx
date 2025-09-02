@@ -29,6 +29,27 @@ export const EducationSection = () => {
         </div>
       </Card>
 
+      {/* Courses Card */}
+      {education.courses && education.courses.length > 0 && (
+        <Card className="p-6 bg-card border-border">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <GraduationCap className="w-6 h-6 text-primary" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-foreground mb-2">Skill-Related Courses</h3>
+              <ul className="list-disc list-inside text-sm text-sidebar-foreground">
+                {education.courses.map((course, idx) => (
+                  <li key={idx}>
+                    {course.name} <span className="text-muted-foreground">({course.year})</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Card>
+      )}
+
       {/* Achievements */}
       <Card className="p-6 bg-card border-border">
         <div className="flex items-center gap-3 mb-4">
