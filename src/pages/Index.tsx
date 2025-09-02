@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { Navigation } from "@/components/Navigation";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { PortfolioSection } from "@/components/sections/PortfolioSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ProjectsSection } from "@/components/sections/PortfolioSection";
+import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 const Index = () => {
@@ -13,17 +14,12 @@ const Index = () => {
     switch (activeSection) {
       case "about":
         return <AboutSection />;
-      case "services":
-        return <ServicesSection />;
-      case "portfolio":
-        return <PortfolioSection />;
-      case "blog":
-        return (
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Blog</h2>
-            <p className="text-muted-foreground">Blog section coming soon...</p>
-          </section>
-        );
+      case "skills":
+        return <SkillsSection />;
+      case "projects":
+        return <ProjectsSection />;
+      case "education":
+        return <EducationSection />;
       case "contact":
         return <ContactSection />;
       default:

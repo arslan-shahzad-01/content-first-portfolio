@@ -1,8 +1,8 @@
-import { personalInfo, socialLinks } from "@/data/portfolio";
+import { personalInfo, socialLinks, education } from "@/data/portfolio";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Calendar, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Github, Linkedin, Twitter, GraduationCap } from "lucide-react";
 
 const iconMap = {
   github: Github,
@@ -57,11 +57,21 @@ export const Sidebar = () => {
 
           <div className="flex items-center gap-3 p-2">
             <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 text-primary" />
+            </div>
+            <div className="text-left">
+              <p className="text-xs text-muted-foreground uppercase tracking-wide">Education</p>
+              <p className="text-sm text-sidebar-foreground">{education.status}</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 p-2">
+            <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
               <Calendar className="w-5 h-5 text-primary" />
             </div>
             <div className="text-left">
-              <p className="text-xs text-muted-foreground uppercase tracking-wide">Birthday</p>
-              <p className="text-sm text-sidebar-foreground">{personalInfo.age}</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wide">Graduation</p>
+              <p className="text-sm text-sidebar-foreground">{education.graduation_year}</p>
             </div>
           </div>
 

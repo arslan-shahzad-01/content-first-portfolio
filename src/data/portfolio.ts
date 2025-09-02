@@ -1,94 +1,108 @@
 // Portfolio data - Edit this file to update your information across the entire website
 
 export const personalInfo = {
-  name: "Richard Hanrick",
-  role: "Web Developer",
+  name: "Arslan",
+  role: "Full Stack Developer | AI Enthusiast | Problem Solver",
   avatar: "/lovable-uploads/55b60f7e-d4ed-4e10-bbc2-04cd669c7df0.png",
-  email: "richard@example.com",
-  phone: "+1 (234) 567-8900",
-  location: "New York, USA",
-  age: "23 June, 1982",
-  about: "Hi, I'm a Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
-  aboutExtended: "My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand."
+  email: "dev.arslanshahzad@gmail.com",
+  phone: "+92 XXX XXX XXXX",
+  location: "Pakistan",
+  age: "Student",
+  about: "I'm an undergraduate student pursuing BSAI (Bachelor of Science in Artificial Intelligence) at Information Technology University, graduating in 2027. I specialize in Full Stack Development, Artificial Intelligence, and Data Engineering.",
+  aboutExtended: "My expertise spans across backend systems using FastAPI and SQL, frontend development with React and CSS, model training & deployment, and data visualization. I have hands-on experience building end-to-end applications and working with real-world data to create meaningful solutions."
+};
+
+export const education = {
+  degree: "BSAI (Bachelor of Science in Artificial Intelligence)",
+  institution: "Information Technology University",
+  graduation_year: 2027,
+  status: "Undergraduate Student"
 };
 
 export const navigationItems = [
   { id: "about", label: "About", href: "#about" },
-  { id: "services", label: "My Services", href: "#services" },
-  { id: "portfolio", label: "Portfolio", href: "#portfolio" },
-  { id: "blog", label: "Blog", href: "#blog" },
+  { id: "skills", label: "Skills", href: "#skills" },
+  { id: "projects", label: "Projects", href: "#projects" },
+  { id: "education", label: "Education", href: "#education" },
   { id: "contact", label: "Contact", href: "#contact" }
 ];
 
-export const services = [
-  {
-    id: "web-design",
-    title: "Web Design",
-    description: "The most modern and high-quality design made at a professional level.",
-    icon: "🎨"
-  },
-  {
-    id: "web-development",
-    title: "Web Development",
-    description: "High-quality development of sites at the professional level.",
-    icon: "💻"
-  },
-  {
-    id: "mobile-apps",
-    title: "Mobile Apps",
-    description: "Professional development of applications for iOS and Android.",
-    icon: "📱"
-  },
-  {
-    id: "photography",
-    title: "Photography",
-    description: "I make high-quality photos of any category at a professional level.",
-    icon: "📷"
-  }
+export const skills = {
+  languages: ["Python", "C++"],
+  frameworks_libraries: ["FastAPI", "Streamlit", "SQLAlchemy", "Alembic", "Plotly", "React"],
+  databases: ["PostgreSQL", "Oracle", "CSV-based ETL pipelines"],
+  tools_platforms: ["Git/GitHub", "VS Code", "Docker", "JWT Authentication"],
+  other_skills: ["Algorithms", "Data Structures", "Problem Solving"]
+};
+
+export const strengths = [
+  "Backend systems (FastAPI, SQL)",
+  "Frontend (React, CSS)", 
+  "Model training & deployment",
+  "Data visualization"
+];
+
+export const fields = [
+  "Full Stack Development",
+  "Artificial Intelligence", 
+  "Data Engineering"
 ];
 
 export const projects = [
   {
-    id: "project-1",
-    title: "E-commerce Platform",
-    description: "Modern e-commerce solution with React and Node.js",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
-    category: "web-development"
+    id: "trip-snatchers",
+    name: "Trip Snatchers",
+    description: "A holiday price-tracking website that lets users track trips, set price alerts, and view public snatched deals.",
+    technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "React", "CSS"],
+    features: ["User accounts", "Holiday tracking", "Price drop notifications", "Snatched deals page"],
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
+    githubUrl: "https://github.com/dev-arslan-shahzad/trip-snatchers",
+    liveUrl: "#",
+    category: "full-stack"
   },
   {
-    id: "project-2",
-    title: "Brand Identity Design",
-    description: "Complete brand identity package for tech startup",
-    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&h=300&fit=crop",
-    technologies: ["Figma", "Illustrator", "Photoshop"],
-    liveUrl: "https://example.com",
-    category: "web-design"
+    id: "skin-cancer-detection",
+    name: "Skin Cancer Detection System",
+    description: "Final Year Project focused on detecting skin cancer using machine learning models with a full-stack system.",
+    technologies: ["Python", "ML Model Training", "FastAPI", "Frontend Integration"],
+    features: ["Backend & Model training", "Documentation", "System integration"],
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+    githubUrl: "https://github.com/dev-arslan-shahzad/skin-cancer-detection",
+    category: "ai-ml"
   },
   {
-    id: "project-3",
-    title: "Mobile Banking App",
-    description: "Secure mobile banking application with biometric authentication",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-    technologies: ["React Native", "Firebase", "TypeScript"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
-    category: "mobile-apps"
+    id: "etl-dashboard",
+    name: "ETL & Device Monitoring Dashboard", 
+    description: "Built a Streamlit dashboard to visualize device data from Oracle & CSV sources.",
+    technologies: ["Streamlit", "Oracle", "CSV", "Plotly"],
+    features: ["Filtering", "Overview metrics", "Device monitoring", "Interactive visualizations"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+    githubUrl: "https://github.com/dev-arslan-shahzad/etl-dashboard",
+    category: "data-engineering"
   }
 ];
 
+export const achievements = [
+  "Developed end-to-end full stack applications from scratch",
+  "Hands-on experience in AI model training & deployment", 
+  "Built ETL pipelines & dashboards for real-world data",
+  "Strong foundation in algorithms & problem solving"
+];
+
+export const interests = {
+  hobbies: ["Coding", "Experimenting with AI/ML", "Building apps"],
+  passions: ["Full Stack Development", "Machine Learning Research", "Real-world Software Solutions"]
+};
+
 export const socialLinks = [
-  { platform: "GitHub", url: "https://github.com/username", icon: "github" },
-  { platform: "LinkedIn", url: "https://linkedin.com/in/username", icon: "linkedin" },
-  { platform: "Twitter", url: "https://twitter.com/username", icon: "twitter" },
-  { platform: "Dribbble", url: "https://dribbble.com/username", icon: "dribbble" }
+  { platform: "GitHub", url: "https://github.com/dev-arslan-shahzad", icon: "github" },
+  { platform: "LinkedIn", url: "https://linkedin.com/in/arslan-shahzad", icon: "linkedin" },
+  { platform: "Twitter", url: "https://twitter.com/arslan_dev", icon: "twitter" }
 ];
 
 export const contactInfo = {
   email: personalInfo.email,
   phone: personalInfo.phone,
   location: personalInfo.location,
-  availability: "Available for freelance work"
+  availability: "Available for internships and freelance work"
 };
