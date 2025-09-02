@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { Navigation } from "@/components/Navigation";
+import { MobileHeader } from "@/components/MobileHeader";
+import { MobileNav } from "@/components/MobileNav";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { navigationItems } from "@/data/portfolio";
@@ -8,7 +10,7 @@ import { ProjectsSection } from "@/components/sections/PortfolioSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
-const Index = () => {
+export default function Index() {
   const [activeSection, setActiveSection] = useState(() => {
     // Get initial section from URL hash or default to "about"
     const hash = window.location.hash.slice(1);
@@ -50,25 +52,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="flex max-w-7xl mx-auto p-6 gap-8">
-        {/* Sidebar */}
-        <div className="flex-shrink-0">
-          <Sidebar />
-        </div>
-
-        {/* Main Content */}
-        <div className="flex-1 min-w-0">
-          <div className="bg-card rounded-xl border border-border p-8 min-h-[calc(100vh-3rem)]">
-            <Navigation 
-              activeSection={activeSection} 
-              onSectionChange={setActiveSection} 
-            />
-            {renderSection()}
+      <div className="lg:hidden flex flex-col min-h-screen">
+        <MobileHeader />
+        <main className="flex-1 px-3 pt-4 pb-28">
+          {renderSection()}
+        </main>
+        <MobileNav
+          activeSection={activeSection}
+          onSectionChange={setActiveSection}
+        />
+      </div>
+      <div className="hidden lg:block">
+        <div className="max-w-7xl mx-auto p-6">
+          <div className="flex gap-8">
+            <aside className="w-auto flex-shrink-0">
+              <Sidebar />
+            </aside>
+            <main className="flex-1 min-w-0">
+              <div className="bg-card rounded-xl border border-border p-8">
+                <Navigation 
+                  activeSection={activeSection} 
+                  onSectionChange={setActiveSection} 
+                />
+                {renderSection()}
+              </div>
+            </main>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Index;
+}

@@ -14,10 +14,10 @@ const iconMap = {
 
 export const Sidebar = () => {
   return (
-    <Card className="w-80 h-fit p-6 bg-sidebar border-sidebar-border">
-      <div className="flex flex-col items-center text-center space-y-6">
+    <Card className="w-full lg:w-80 h-fit p-4 sm:p-6 bg-sidebar border-sidebar-border">
+      <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6">
         {/* Profile Picture */}
-        <Avatar className="w-28 h-28">
+        <Avatar className="w-24 sm:w-28 h-24 sm:h-28">
           <AvatarImage src={personalInfo.avatar} alt={personalInfo.name} />
           <AvatarFallback className="text-2xl bg-primary text-primary-foreground">
             {personalInfo.name.split(" ").map(n => n[0]).join("")}
