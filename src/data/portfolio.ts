@@ -68,20 +68,10 @@ export const projects = [
     description: "A holiday price-tracking website that lets users track trips, set price alerts, and view public snatched deals.",
     technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "React", "CSS"],
     features: ["User accounts", "Holiday tracking", "Price drop notifications", "Snatched deals page"],
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
+    image: "/tripsnatchers.png",
     githubUrl: "https://github.com/dev-arslan-shahzad/trip-snatchers",
     liveUrl: "#",
     category: "full-stack"
-  },
-  {
-    id: "skin-cancer-detection",
-    name: "Skin Cancer Detection System",
-    description: "Final Year Project focused on detecting skin cancer using machine learning models with a full-stack system.",
-    technologies: ["Python", "ML Model Training", "FastAPI", "Frontend Integration"],
-    features: ["Backend & Model training", "Documentation", "System integration"],
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
-    githubUrl: "https://github.com/dev-arslan-shahzad/skin-cancer-detection",
-    category: "ai-ml"
   },
   {
     id: "Hate-Speech-Detector",
